@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ChoiceIsRight</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_add_categories">Add Category</string>
+    <string name="action_add_choices">Add Choice</string>
+    <string name="title_activity_categories">CategoriesActivity</string>
+    <string name="title_activity_choices">ChoicesActivity</string>
+
 </resources>

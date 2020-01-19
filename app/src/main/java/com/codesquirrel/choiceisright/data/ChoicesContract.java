@@ -9,12 +9,13 @@ public class ChoicesContract {
     public static final class ChoiceEntry implements BaseColumns {
 
         //  constant variable with Table Name
-        public static final String TABLE_NAME = "choices";
+        public static final String CHOICES_TABLE_NAME = "choices";
+        public static final String CATEGORIES_TABLE_NAME = "categories";
 
         // constant variables of column names
         public static final String _ID = BaseColumns._ID;
-        public static final String COLUMN_Choice_Catagory = "catagory_id";
-        public static final String COLUMN_Choice = "Choice";
+        public static final String COLUMN_Category = "category";
+        public static final String COLUMN_Choice = "choice";
 
 
     }

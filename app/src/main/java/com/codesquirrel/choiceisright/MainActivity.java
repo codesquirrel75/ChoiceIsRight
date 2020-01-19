@@ -1,5 +1,6 @@
 package com.codesquirrel.choiceisright;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -11,6 +12,8 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.codesquirrel.choiceisright.data.ChoicesDBHelper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,7 +49,11 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_add_categories) {
+            startActivity(new Intent(this, CategoriesActivity.class));
+            return true;
+        }else if (id == R.id.action_add_choices) {
+            startActivity(new Intent(this, ChoicesActivity.class));
             return true;
         }
 
