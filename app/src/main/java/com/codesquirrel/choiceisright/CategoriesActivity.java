@@ -46,6 +46,14 @@ public class CategoriesActivity extends AppCompatActivity {
             }
         });
 
+        FloatingActionButton fab2 = findViewById(R.id.fab2);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteCategory();
+            }
+        });
+
         // set up Database connection
         ChoicesDBHelper mDbHelper = new ChoicesDBHelper(this);
         db = mDbHelper.getWritableDatabase();
@@ -65,7 +73,7 @@ public class CategoriesActivity extends AppCompatActivity {
             size = 0;
         }
         categoriesTotal = findViewById(R.id.categories_total);
-        categoriesTotal.setText(size);
+        categoriesTotal.setText(Integer.toString(size));
 
         //  --- Categories spinner ---
 
@@ -91,6 +99,10 @@ public class CategoriesActivity extends AppCompatActivity {
         values.put(ChoicesContract.ChoiceEntry.COLUMN_Category, categoryName);
 
         ChoicesDBHelper.setCategories(db, values);
+
+    }
+
+    public void deleteCategory(){
 
     }
 
