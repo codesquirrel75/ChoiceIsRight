@@ -3,9 +3,10 @@
     <string name="action_add_categories">Edit Categories</string>
     <string name="action_add_choices">Edit Choices</string>
     <string name="title_activity_categories">Edit Categories</string>
-    <string name="title_activity_choices">ChoicesActivity</string>
+    <string name="title_activity_choices">Edit Choices</string>
     <string name="category_input">add a category</string>
     <string name="categories">Categories</string>
     <string name="removeCategory">Remove Category</string>
+    <string name="option_input_string">Enter an Option</string>
 
 </resources>

@@ -149,6 +149,10 @@ public class CategoriesActivity extends AppCompatActivity {
 
     }
 
-
+    @Override
+    protected void onStop() {
+        super.onStop();
+        db.close();
+    }
 
 }

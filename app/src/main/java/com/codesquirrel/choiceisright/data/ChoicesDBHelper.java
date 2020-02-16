@@ -125,7 +125,7 @@ public class ChoicesDBHelper extends SQLiteOpenHelper {
 
         ArrayList<String> result = new ArrayList();
 
-        Cursor cursor = db.rawQuery("SELECT "+ ChoiceEntry.COLUMN_Choice + " FROM "+ ChoiceEntry.CHOICES_TABLE_NAME +" WHERE " + ChoiceEntry.CATEGORIES_TABLE_NAME + " = ?;",new String[] {cat});
+        Cursor cursor = db.rawQuery("SELECT "+ ChoiceEntry.COLUMN_Choice + " FROM "+ ChoiceEntry.CHOICES_TABLE_NAME +" WHERE " + ChoiceEntry.COLUMN_Category + " = '" + cat + "';", null);
 
         int numberColumn = cursor.getColumnIndex(ChoiceEntry.COLUMN_Choice);
 
@@ -151,6 +151,16 @@ public class ChoicesDBHelper extends SQLiteOpenHelper {
 
         db.execSQL("DELETE FROM " + ChoiceEntry.CHOICES_TABLE_NAME + " WHERE " + ChoiceEntry.COLUMN_Choice + "= '" + choice + "'");
 
+    }
+
+    public static boolean TableExists(SQLiteDatabase db, String table){
+        String sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='"+table+"'";
+        Cursor mCursor = db.rawQuery(sql, null);
+        if (mCursor.getCount() > 0) {
+            return true;
+        }
+        mCursor.close();
+        return false;
     }
 
     @Override
