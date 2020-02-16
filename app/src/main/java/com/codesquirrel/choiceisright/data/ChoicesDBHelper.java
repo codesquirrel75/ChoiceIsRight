@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.strictmode.SqliteObjectLeakedViolation;
 import android.util.Log;
 
 import com.codesquirrel.choiceisright.data.ChoicesContract.ChoiceEntry;
@@ -106,6 +107,12 @@ public class ChoicesDBHelper extends SQLiteOpenHelper {
 
     }
 
+    public static void deleteCategories(SQLiteDatabase db, String category){
+
+        db.execSQL("DELETE FROM " + ChoiceEntry.CATEGORIES_TABLE_NAME + " WHERE " + ChoiceEntry.COLUMN_Category + "= '" + category + "'");
+
+    }
+
 
     public static void setChoices(SQLiteDatabase db, ContentValues values){
 
@@ -137,6 +144,12 @@ public class ChoicesDBHelper extends SQLiteOpenHelper {
         }
 
         return result;
+
+    }
+
+    public static void deleteChoice(SQLiteDatabase db, String choice){
+
+        db.execSQL("DELETE FROM " + ChoiceEntry.CHOICES_TABLE_NAME + " WHERE " + ChoiceEntry.COLUMN_Choice + "= '" + choice + "'");
 
     }
 

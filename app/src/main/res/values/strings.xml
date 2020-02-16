@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">ChoiceIsRight</string>
-    <string name="action_add_categories">Add Category</string>
-    <string name="action_add_choices">Add Choice</string>
-    <string name="title_activity_categories">CategoriesActivity</string>
+    <string name="action_add_categories">Edit Categories</string>
+    <string name="action_add_choices">Edit Choices</string>
+    <string name="title_activity_categories">Edit Categories</string>
     <string name="title_activity_choices">ChoicesActivity</string>
+    <string name="category_input">add a category</string>
+    <string name="categories">Categories</string>
+    <string name="removeCategory">Remove Category</string>
 
 </resources>
