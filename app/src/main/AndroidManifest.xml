@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".OptionWheel"
+            android:label="@string/title_activity_option_wheel"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".ChoicesActivity"
             android:label="@string/title_activity_choices"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CategoriesActivity"
             android:label="@string/title_activity_categories"

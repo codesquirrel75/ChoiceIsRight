@@ -8,5 +8,6 @@
     <string name="categories">Categories</string>
     <string name="removeCategory">Remove Category</string>
     <string name="option_input_string">Enter an Option</string>
+    <string name="title_activity_option_wheel">OptionWheel</string>
 
 </resources>
